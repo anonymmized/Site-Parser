@@ -1,13 +1,14 @@
+import re
+import os
+import csv
+import time
+import json
 import requests
+from datetime import datetime
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
-import re
-import time
-import csv
-from datetime import datetime
-import os
 from concurrent.futures import ThreadPoolExecutor
-import json
+
 
 
 class SiteParser:
@@ -52,7 +53,7 @@ class SiteParser:
 Scan time: {total_time:.2f} seconds
 Pages scanned: {len(self.visited_urls)}
 Words found: {len(self.results)}
-=====================
+===================
 """
         return report
 
